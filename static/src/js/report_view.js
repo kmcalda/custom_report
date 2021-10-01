@@ -113,7 +113,7 @@ odoo.define("custom_report.report_view", function (require) {
       self.tableViewReport = $("#example").DataTable({
         dom: "Bfrtip",
         scrollX: true,
-        scrollY: 350,
+        scrollY: 400,
         buttons: [
           "copy",
           "csv",
