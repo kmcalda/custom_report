@@ -69,11 +69,11 @@ class CustomReport(models.AbstractModel):
                     line.quantity,
                     uom.name AS  uom,
                     line.price_unit AS unit_price,
-                    line.ref AS reference_invoice,
                     line.discount,
                     move.ks_global_discount_rate AS special_discount,
                     line.price_subtotal,
                     TO_CHAR(move.invoice_date, 'MM-DD-YYYY') as invoice_date,
+                    line.ref AS reference_invoice,
                     partner2.name AS salesman
                 FROM
                     account_move_line AS line

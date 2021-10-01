@@ -34,7 +34,7 @@ odoo.define("custom_report.report_view", function (require) {
             []
           )
           .then(function (result) {
-            console.log(result);
+            console.log(typeof result);
             // self.invoice_data = result;
             self.invoice_data = {};
             self.render();
@@ -113,7 +113,7 @@ odoo.define("custom_report.report_view", function (require) {
       self.tableViewReport = $("#example").DataTable({
         dom: "Bfrtip",
         scrollX: true,
-        scrollY: 650,
+        scrollY: 350,
         buttons: [
           "copy",
           "csv",
