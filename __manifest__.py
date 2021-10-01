@@ -9,9 +9,10 @@
     'license': 'AGPL-3',
     'depends': ['base', 'sale_management', 'stock', 'contacts', 'account', ],
     'data': [
+        'security/security.xml',
         'views/menu.xml',
         'views/web_asset_backend_template.xml',
-        'security/security.xml'
+        
     ],
     'qweb': ["static/src/xml/report_view.xml"],
     'application': True,
