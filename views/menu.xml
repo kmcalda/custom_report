@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Action Menu -->
+    <record id="action_custom_report_view" model="ir.actions.client">
+        <field name="name">Distributors</field>
+        <field name="tag">custom_report</field>
+        <!-- <field name="target">main</field> -->
+    </record>
+
+    <!-- Set the custom menu to the parent menu -->
+    <menuitem id="custom_menu" 
+        name="Distributors" 
+        action="action_custom_report_view" 
+        parent="account.account_reports_management_menu" 
+        groups="custom_report.group_report_distributor"
+        sequence="2" />
+</odoo>

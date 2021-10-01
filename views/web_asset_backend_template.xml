@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend_custom_report" name="Custom Report" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <!-- Custom JS -->
+                <script type="text/javascript" src="/custom_report/static/src/js/report_view.js"></script>
+
+            <!--   Datatables JS  -->
+            <script type="text/javascript" src="/custom_report/static/lib/DataTables/jquery.dataTables.min.js"></script>
+            <script type="text/javascript" src="/custom_report/static/lib/DataTables/dataTables.min.js"></script>
+            <script type="text/javascript" src="/custom_report/static/lib/DataTables/pdfmake.min.js"></script>
+            <script type="text/javascript" src="/custom_report/static/lib/DataTables/vfs_fonts.js"></script>
+
+            <!-- Datatables CSS -->
+            <link rel="stylesheet" href="/custom_report/static/lib/DataTables/jquery.dataTables.min.css"/>
+            <link rel="stylesheet" href="/custom_report/static/lib/DataTables/dataTables.min.css"/>
+
+        </xpath>
+    </template>
+</odoo>

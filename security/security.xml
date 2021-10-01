@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--  Group for menu visibility  -->
+    <record id="group_report_distributor" model="res.groups">
+        <field name="name">Distributor Reports</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>

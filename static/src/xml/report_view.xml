@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" >
+    <t t-name="Custom_Report" xml:space="preserve">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <h4 style="margin-bottom: 15px;">Distributors</h4>
+                    <input type="date" id="date-start" name="date-start"/>
+                    <input type="date" id="date-end" name="date-end"/>
+                    <button class="btn btn-secondary fa fa-search search-dist"></button>
+                    <hr style="margin-bottom: 20px"/>
+                    <table id="example" class="display nowrap" cellspacing="0" width="100%" >
+                        <thead>
+                                <tr>
+                                    <th>Distributor</th>
+                                    <th>Reference #</th>
+                                    <th>Customer Name</th>
+                                    <th>Industry</th>
+                                    <th>Item Code</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>Uom</th>
+                                    <th>Price</th>
+                                    <th>Discount</th>
+                                    <th>S.Discount</th>
+                                    <th>Total</th>
+                                    <th>Invoice Date</th>
+                                    <th> Invoice Reference</th>
+                                    <th>Salesman</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="widget.invoice_data" t-as="e">
+                                    <td><span t-esc="e['distributor_name']"/></td>
+                                    <td><span t-esc="e['reference']"/></td>
+                                    <td><span t-esc="e['customer_name']"/></td>
+                                    <td><span t-esc="e['industry']"/></td>
+                                    <td><span t-esc="e['item_code']"/></td>
+                                    <td><span t-esc="e['item_name']"/></td>
+                                    <td><span t-esc="e['quantity']"/></td>
+                                    <td><span t-esc="e['uom']"/></td>
+                                    <td><span t-esc="e['unit_price']"/></td>
+                                    <td><span t-esc="e['discount']"/></td>
+                                    <td><span t-esc="e['special_discount']"/></td>
+                                    <td><span t-esc="e['price_subtotal']"/></td>
+                                    <td><span t-esc="e['invoice_date']"/></td>
+                                    <td><span t-esc="e['reference_invoice']"/></td>
+                                    <td><span t-esc="e['salesman']"/></td>            
+                                </tr>
+                            </tbody>
+                    </table> 
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <!-- <t t-name="Invoice_Report">
+        <p>Hello</p> -->
+        <!-- <table id="example" class="display nowrap" cellspacing="0" width="100%">
+                <thead>
+                        <tr>
+                            <th>Distributor</th>
+                            <th>Reference #</th>
+                            <th>Customer Name</th>
+                            <th>Industry</th>
+                            <th>Item Code</th>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                            <th>Uom</th>
+                            <th>Unit Price</th>
+                            <th>Invoice Reference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="widget.invoice_data" t-as="e">
+                            <td><span t-esc="e['distributor_name']"/></td>
+                            <td><span t-esc="e['reference']"/></td>
+                            <td><span t-esc="e['customer_name']"/></td>
+                            <td><span t-esc="e['industry']"/></td>
+                            <td><span t-esc="e['item_code']"/></td>
+                            <td><span t-esc="e['item_name']"/></td>
+                            <td><span t-esc="e['quantity']"/></td>
+                            <td><span t-esc="e['uom']"/></td>
+                            <td><span t-esc="e['unit_price']"/></td>
+                            <td><span t-esc="e['reference_invoice']"/></td>
+                        </tr>
+                    </tbody>
+            </table> -->
+    <!-- </t> -->
+</templates>
